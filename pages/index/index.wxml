@@ -7,8 +7,14 @@
     </block>
 </view>
 
+<view wx:for="{{testArr}}">{{item}}</view>
+
+<view>{{inputValue}}</view>
+<view class="doomm-word">
+  <input type="text" bindinput="bindInput" placeholder="你输什么我弹什么" name="doomm-word"/>
+</view>
 
 <view class="button">
-    <button bindtap="bindbt">弹一个小苹果</button>
+    <button bindtap="bindbt">弹一个?</button>
 </view>
   
