@@ -5,13 +5,20 @@ Page({
     page = this;
   },
   bindbt:function(){
-    doommList.push(new Doomm("你是我的小苹果",Math.ceil(Math.random()*100),Math.ceil(Math.random()*10),getRandomColor()));
+    doommList.push(new Doomm(this.data.inputValue,Math.ceil(Math.random()*100),Math.ceil(Math.random()*10),getRandomColor()));
     this.setData({
       doommData : doommList
     })
   },
   data: {
-    doommData:[]
+    doommData:[],
+    testArr: ['hello', 'xiangyu'],
+    inputValue: ''
+  },
+  bindInput: function (e) {
+    this.setData({
+      inputValue: e.detail.value
+    })
   }
 })
 var doommList=[];
